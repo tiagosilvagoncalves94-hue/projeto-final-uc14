@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa climático</title>
+<style>
+    /* Estilos para a tabela dentro do modal */
+    body {
+        background-color: #f19d2e;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        font-family: Arial, sans-serif;
+    }
+    th, td {
+        border: 1px solid #0c0c0c;
+        text-align: left;
+        padding: 10px;
+    }
+    th {
+        background-color: #f19d2e;
+        width: 30%;
+    }
+    dialog {
+        border: 1px solid #060606;
+        border-radius: 8px;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+    }
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    button {
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    .btn-home {
+        background: #000;
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        padding: 20px;
+     }    
+</style>
+</head>
+<body>
+<h1>Mapa do Brasil</h1>
+<a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+<img src="mapa.svg" alt="mapa brasil" usemap="#brasil">
+<map name="brasil">
+
+    <area shape="poly" 
+    coords="436,453,441,448,457,445,472,444,485,438,496,423,496,416,502,414,508,403,508,395,508,390,509,386,514,383,521,381,517,376,518,368,522,365,526,355,522,350,515,350,503,349,501,338,488,333,479,332,472,330,471,324,463,324,457,329,449,333,444,335,441,337,434,335,430,331,427,337,427,344,427,349,421,350,419,353,419,358,422,362,416,365,415,371,418,376,417,380,412,384,407,386,390,387,388,388,381,388,377,390,370,391,369,394,363,399,363,402,362,406,364,407,369,405,373,407,377,407,386,408,388,408,388,411,388,412,392,413,395,412,401,410,406,410,412,410,414,410,416,412,416,414,417,416,417,421,416,424,419,427,422,431,425,431,427,432,424,435,425,439,425,443,425,447,426,450,428,453,432,453,435,452,439,449,439,451,439,450,438,450"
+    href="#" 
+    data-estado="mg">
+
+    <area shape="poly" 
+    coords="204,239,251,239,251,237,252,233,253,224,256,218,263,230,265,238,279,249,375,255,376,258,371,269,371,298,370,309,366,320,363,330,358,334,352,341,350,345,344,348,337,358,333,364,332,379,320,377,324,367,316,371,302,373,289,366,277,369,265,377,255,366,253,352,227,352,222,333,225,334,221,312,231,293,228,282,227,272,206,272,206,238"
+    href="#" 
+    data-estado="mt">
+
+    <area shape="poly" 
+    coords="336,445,348,434,357,416,362,412,365,408,376,406,388,413,401,412,411,411,417,416,418,427,422,433,425,433,425,444,430,453,436,454,447,450,457,451,454,454,449,457,450,460,437,468,422,469,415,478,407,483,400,485,393,478,386,477,385,470,381,461,378,454,369,452,362,451,355,447,348,446,340,446,335,446,336,445,338,445" 
+    href="#" 
+    data-estado="sp">
+    
+    <area shape="poly" 
+    coords="453,448,470,444,485,441,488,437,494,428,503,434,505,437,503,445,497,448,490,451,490,457,482,457,476,457,470,458,461,457,454,457,451,456,456,453,459,453,459,451,454,449,455,447" 
+    href="#" 
+    data-estado="rj">
+
+</map>
+
+<dialog id="mg">
+    <h2>Minas Gerais</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Tropical de altitude, tropical e semiárido.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>21.393.441 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Entre 700 e 1.500 metros na maior parte do território.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Cerrado, mata atlântica e caatinga.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="mt">
+    <h2>Mato Grosso</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Equatorial e tropical.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~3,6 milhões.</td></tr>
+        <tr><th>ALTITUDE</th><td>200 a 600 metros (predomínio de planícies e planaltos baixos).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Amazônia, cerrado e pantanal.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="sp">
+    <h2>São Paulo</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Tropical, tropical de altitude e subtropical.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~44,4 milhões.</td></tr>
+        <tr><th>ALTITUDE</th><td>300 a 900 metros (interior); áreas serranas acima de 1.500 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Mata Atlântica e cerrado.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="rj">
+    <h2>Rio de Janeiro</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Tropical atlântico e tropical de altitude.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~16 milhões.</td></tr>
+        <tr><th>ALTITUDE</th><td>0 a 200 metros (litoral); 800 a 2.300 metros (serra).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Mata Atlântica e vegetação litorânea.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script>
+    // Abre o modal do estado correspondente ao clicar na área do mapa
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.dataset.estado;
+            document.getElementById(id).showModal();
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "Fechar"
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+</body>
+</html>

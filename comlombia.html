@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Climático da Colômbia</title>
+<style>
+    /* Seus estilos originais de tabela e modal mantidos */
+    body {
+        background-color: #f19d2e;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        font-family: Arial, sans-serif;
+    }
+    th, td {
+        border: 1px solid #0c0c0c;
+        text-align: left;
+        padding: 10px;
+    }
+    th {
+        background-color: #f19d2e;
+        width: 30%;
+    }
+    dialog {
+        border: 1px solid #060606;
+        border-radius: 8px;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+    }
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    button {
+        padding: 8px 16px;
+        cursor: pointer;
+    }
+    .btn-home {
+        background: #000;
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        padding: 20px;
+    }    
+</style>
+</head>
+<body>
+    <a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+<h1>Mapa da Colômbia</h1>
+
+<img src="img/comlombia.svg.svg" alt="mapa colombia" usemap="#colombia">
+
+<map name="colombia">
+
+    <area shape="poly" 
+    coords="429,406,428,397,434,394,440,399,441,410,443,420,441,427,446,435,462,442,475,445,493,470,503,459,511,462,520,475,537,492,551,498,537,511,528,514,525,513,521,520,519,527,515,523,510,527,500,524,495,522,491,526,483,522,476,522,465,515,450,506,444,505,436,495,423,482,419,473,391,461,388,458,392,444,401,444,418,417,422,410" 
+    href="#" 
+    data-estado="caqueta">
+
+    <area shape="poly" 
+    coords="476,416,494,416,501,406,508,407,516,402,521,402,523,396,530,399,558,396,567,399,576,399,566,405,572,412,577,420,592,419,594,420,592,424,581,427,575,431,564,432,554,439,547,437,546,449,542,458,541,462,533,472,525,478,516,466,511,459,502,458,494,468,475,444,475,425,476,416" 
+    href="#" 
+    data-estado="guaviare">
+
+    <area shape="poly" 
+    coords="590,425,590,435,599,440,599,464,618,464,624,478,626,485,608,489,607,505,608,521,614,550,606,542,596,538,591,542,586,519,572,513,562,505,549,495,540,492,527,478,545,463,550,441,571,432,589,426" 
+    href="#" 
+    data-estado="vaupes">
+    
+    <area shape="poly" 
+    coords="580,398,589,380,596,370,616,364,635,366,648,357,669,354,682,377,665,398,685,413,688,421,699,456,690,459,690,442,680,423,664,438,660,437,654,429,650,434,655,441,598,437,591,427,593,418,577,417,568,405,586,393,587,384,591,378" 
+    href="#" 
+    data-estado="guainia">
+
+</map>
+
+<dialog id="caqueta">
+    <h2>Caquetá</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Equatorial úmido (tropical chuvoso).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~410.000 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Predominantemente baixa (100 a 400m), com elevações na cordilheira.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Floresta Amazônica (Selva).</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="guaviare">
+    <h2>Guaviare</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Tropical de savana e equatorial.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~90.000 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Entre 150 e 250 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Transição entre a Floresta Amazônica e as Savanas (Llanos).</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="vaupes">
+    <h2>Vaupés</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Equatorial chuvoso (alta umidade).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~45.000 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Aproximadamente 100 a 200 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Floresta Amazônica densa.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="guainia">
+    <h2>Guainía</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Equatorial e tropical de transição.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~50.000 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Aproximadamente 100 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Floresta Amazônica, áreas de savana e transição biológica.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script>
+    // Abre o modal do departamento correspondente ao clicar na área do mapa
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.dataset.estado;
+            document.getElementById(id).showModal();
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "Fechar"
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Mapas Climáticos</title>
+<style>
+    /* Estilos Globais da Página Home */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Permite o menu fixo e o conteúdo lado a lado */
+        height: 100vh;
+        color: #333;
+        background-color: #f7f7f7;
+    }
+
+    /* MENU LATERAL ESQUERDO (Aberto por padrão) */
+    .menu-lateral {
+        height: 100%;
+        width: 300px; /* Mantido aberto permanentemente */
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        /* Cores Quentes: Gradiente do Vermelho escuro para o Laranja */
+        background: linear-gradient(180deg, #b71c1c 0%, #e65100 100%);
+        overflow-x: hidden;
+        padding-top: 40px;
+        box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+    }
+
+    /* Links do Menu */
+    .menu-lateral a {
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        color: #ffffff;
+        display: block;
+        transition: 0.2s;
+        border-left: 5px solid transparent;
+    }
+
+    /* Efeito de Hover nos links */
+    .menu-lateral a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-left: 5px solid #ffeb3b; /* Amarelo quente */
+        padding-left: 40px;
+    }
+
+    /* ÁREA DE CONTEÚDO PRINCIPAL (Com o fundo de mapa-múndi) */
+    .conteudo-principal {
+        margin-left: 300px; /* Empurra o conteúdo para não ficar embaixo do menu */
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        /* Fundo com imagem de mapa-múndi em alta qualidade */
+        background-image: url(img/mapa\ mundi.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    /* Caixa de boas-vindas com efeito de desfoque sutil no fundo */
+    .boas-vindas {
+        text-align: center;
+        padding: 30px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        max-width: 500px;
+        backdrop-filter: blur(5px);
+    }
+
+    .boas-vindas h1 {
+        font-size: 36px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #b71c1c; /* Vermelho quente */
+    }
+
+    .boas-vindas p {
+        font-size: 18px;
+        color: #444;
+        margin-bottom: 25px;
+    }
+
+    /* BOTÃO VOLTAR PARA A HOME (Utilize esta estrutura nas páginas dos países) */
+    .btn-home {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        background: linear-gradient(90deg, #e65100, #b71c1c); /* Gradiente quente */
+        border: none;
+        border-radius: 6px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-home:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+    
+    .btn-home:active {
+        transform: translateY(0);
+    }
+</style>
+</head>
+<body>
+
+    <div id="meuMenu" class="menu-lateral">
+        <a href="brasil.html">Brasil</a>
+        <a href="alemanha.html">Alemanha</a>
+        <a href="comlombia.html">Colômbia</a>
+        <a href="eua.html">EUA</a>
+        <a href="espanha.html">Espanha</a>
+        <a href="israel.html">Israel</a>
+    </div>
+
+    <div class="conteudo-principal">
+        <div class="boas-vindas">
+            <h1>Painel de Mapas Climáticos</h1>
+            <p>Selecione um dos países listados no menu à esquerda para visualizar suas informações geográficas e climáticas detalhadas.</p>
+            <a href="index.html" class="btn-home">Voltar para a Home</a>
+        </div>
+    </div>
+
+</body>
+</html>

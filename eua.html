@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Climático dos EUA</title>
+<style>
+    /* Estilos globais para a página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: orange;
+        margin: 20px;
+        color: #333;
+    }
+
+    /* CONTROLAR O TAMANHO DO MAPA */
+    img[usemap="#eua"] {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 4px;
+    }
+
+    /* AJUSTE DO MODAL: Agora bem mais largo para telas grandes */
+    dialog {
+        border: 2px solid #0c0c0c;
+        border-radius: 12px;
+        padding: 30px;
+        width: 90%;
+        max-width: 800px; /* Aumentado de 600px para 800px */
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        font-size: 18px; /* Aumentou o texto geral do modal */
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    dialog h2 {
+        margin-top: 0;
+        font-size: 28px; /* Título maior */
+        color: #111;
+        border-bottom: 3px solid #f19d2e;
+        padding-bottom: 10px;
+    }
+
+    /* AJUSTE DA TABELA: Fonte maior e mais espaçada */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        font-family: Arial, sans-serif;
+    }
+
+    th, td {
+        border: 2px solid #0c0c0c; /* Bordas um pouco mais grossas */
+        text-align: left;
+        padding: 15px; /* Mais espaço interno para a tabela parecer maior */
+        font-size: 18px; /* Texto da tabela maior */
+    }
+
+    th {
+        background-color: #f19d2e;
+        color: #000;
+        width: 25%; 
+        font-weight: bold;
+    }
+
+    td {
+        background-color: #fff;
+    }
+
+    /* Botão de fechar maior */
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #e0e0e0;
+        border: 1px solid #999;
+        border-radius: 6px;
+        font-weight: bold;
+        float: right; 
+    }
+
+    button:hover {
+        background-color: #d0d0d0;
+    }
+    .btn-home {
+        background: #000;
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        padding: 20px;
+     }    
+
+</style>
+</head>
+<body>
+    <a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+<h1>Mapa dos Estados Unidos</h1>
+
+<img src="img/eua.svg" alt="mapa eua" usemap="#eua">
+
+<map name="eua">
+    <area shape="poly" 
+    coords="693,843,723,639,1002,666,993,876" 
+    href="#" 
+    data-estado="colorado">
+
+    <area shape="poly" 
+    coords="480,804,543,549,645,567,642,615,723,636,687,840,480,804" 
+    href="#" 
+    data-estado="utah">
+
+    <area shape="poly" 
+    coords="483,810,471,858,444,846,438,894,453,939,426,963,420,987,408,1026,564,1134,657,1140,690,846" 
+    href="#" 
+    data-estado="arizona">
+    
+    <area shape="poly" 
+    coords="1005,717,1284,726,1287,756,1305,774,1302,885,1002,867" 
+    href="#" 
+    data-estado="kansas">
+</map>
+
+<dialog id="colorado">
+    <h2>Colorado</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Semiárido, alpino e continental acadêmico.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~5,8 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Elevada; média de 2.000 metros (presença das Montanhas Rochosas).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Florestas de pinheiros, esteppes e vegetação alpina.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="utah">
+    <h2>Utah</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Árido, semiárido e alpino nas montanhas.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~3,4 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Geralmente acima de 1.800 metros (planalto e montanhas).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Desértica, arbustos de áreas secas e florestas de pinheiros nas serras.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="arizona">
+    <h2>Arizona</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Árido (desértico) ao sul e semiárido/alpino ao norte.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~7,4 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>De 20 metros (vales do sul) a mais de 3.000 metros (picos do norte).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Cactos (Deserto de Sonora), arbustos áridos e florestas de pinheiro cras.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="kansas">
+    <h2>Kansas</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Continental úmido (leste) e semiárido (oeste).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~2,9 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Moderada; varia de 200 a 1.200 metros (Planícies Centrais).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Pradarias (campos de gramíneas) e poucas áreas florestais.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script>
+    // Abre o modal do estado correspondente ao clicar na área do mapa
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.dataset.estado;
+            document.getElementById(id).showModal();
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "Fechar"
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+</body>
+</html>

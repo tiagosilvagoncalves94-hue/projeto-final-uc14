@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Climático de Israel</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: orange;
+        margin: 20px;
+        color: #333;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .btn-home {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #000;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 6px;
+        z-index: 1000;
+    }
+
+    .btn-home:hover {
+        background: #333;
+    }
+
+    .map-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    img[usemap="#israel"] {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    dialog {
+        border: 2px solid #0c0c0c;
+        border-radius: 12px;
+        padding: 30px;
+        width: 90%;
+        max-width: 800px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        font-size: 18px;
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    dialog h2 {
+        font-size: 28px;
+        border-bottom: 3px solid #f19d2e;
+        padding-bottom: 10px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+    }
+
+    th, td {
+        border: 2px solid #0c0c0c;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    th {
+        background-color: #f19d2e;
+    }
+
+    td {
+        background-color: #fff;
+    }
+
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #e0e0e0;
+        border-radius: 6px;
+        float: right;
+    }
+
+    button:hover {
+        background-color: #ccc;
+    }
+</style>
+</head>
+
+<body>
+
+<a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+
+<h1>Mapa de Israel</h1>
+
+<div class="map-container">
+    <img src="img/israel.svg" usemap="#israel">
+</div>
+
+<map name="israel">
+
+    <area shape="poly" coords="1146,1003,1123,1000,1115,944,1115,911,1107,904,1180,889,1236,916,1266,940,1257,957,1207,962,1179,981" href="#" data-estado="jerusalem">
+
+    <area shape="poly" coords="1179,981,1145,1013,1099,1078,1093,1118,1160,1118,1220,1130,1272,1108,1335,1094,1356,1020,1389,969,1395,857,1434,765,1447,691,1404,663,1369,612,1317,592,1268,618,1248,641,1232,673,1237,694,1211,733,1203,786,1194,844,1194,882,1235,909,1263,933,1267,957,1217,969,1198,973" href="#" data-estado="judea">
+
+    <area shape="poly" coords="840,1140,957,1017,987,981,954,957,1050,873,1107,909,1140,1008,1083,1125,1275,1128,1335,1110,1287,1182,1296,1263,1197,1419,1143,1494,1083,1584,1077,1689,1035,1773,1008,1857,936,1974,912,1962,933,1902,837,1149" href="#" data-estado="south">
+
+    <area shape="poly" coords="1320,588,1311,567,1278,573,1269,549,1293,528,1299,504,1317,486,1308,432,1323,363,1338,324,1461,360,1500,348,1527,282,1566,300,1524,444,1512,543,1470,561,1473,594,1452,612,1458,636,1437,678,1362,600" href="#" data-estado="north">
+
+</map>
+
+<!-- MODAIS COMPLETOS -->
+<dialog id="jerusalem">
+    <h2>Distrito de Jerusalém</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Nordeste: Mediterrâneo / Sul: Semiárido.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~1,2 milhão de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Média de 600 a 800 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Matagais mediterrâneos, pinheiros e olivais.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="judea">
+    <h2>Distrito de Judeia e Samaria</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Mediterrâneo e Semiárido.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~500.000 habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>-400m até mais de 1.000m.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Estepe, arbustos e oliveiras.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="south">
+    <h2>Distrito Sul</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Árido e desértico.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~1,4 milhão.</td></tr>
+        <tr><th>ALTITUDE</th><td>Planícies e depressões.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Deserto do Neguev.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="north">
+    <h2>Distrito Norte</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Mediterrâneo úmido.</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~1,5 milhão.</td></tr>
+        <tr><th>ALTITUDE</th><td>Até 1.200m.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Florestas e vegetação perene.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/image-map-resizer/js/imageMapResizer.min.js"></script>
+
+<script>
+    imageMapResize();
+
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            document.getElementById(this.dataset.estado).showModal();
+        });
+    });
+
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+
+</body>
+</html>

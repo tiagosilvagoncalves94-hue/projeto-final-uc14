@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Admin</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff3c3c, #ffb300);
+}
+
+.container {
+    width: 900px;
+    height: 500px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* LADO ESQUERDO */
+.left {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 400px;
+}
+
+/* LADO DIREITO */
+.right {
+    width: 50%;
+    background: linear-gradient(135deg, #d60000, #ff9800);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.right h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+/* INPUTS */
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* BOTÕES */
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-cadastrar {
+    background: #fcf303;
+    color: #000;
+}
+
+.btn-cadastrar:hover {
+    background: #ffca28;
+}
+
+.btn-login {
+    background: transparent;
+    border: 2px solid #fff;
+    color: white;
+}
+
+.btn-login:hover {
+    background: white;
+    color: #d60000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- IMAGEM -->
+    <div class="left">
+        <img src="admin.svg" alt="Admin">
+    </div>
+
+    <!-- LOGIN -->
+    <div class="right">
+        <h1>Bem-vindo!</h1>
+
+        <div class="input-box">
+            <input type="text" id="usuario" placeholder="👤 Usuário">
+        </div>
+
+        <div class="input-box">
+            <input type="email" id="email" placeholder="📧 E-mail">
+        </div>
+
+        <div class="input-box">
+            <input type="password" id="senha" placeholder="🔒 Senha">
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-cadastrar">Cadastrar</button>
+            <button class="btn btn-login" onclick="entrar()">Login</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- SCRIPT DO LOGIN -->
+<script>
+function entrar() {
+
+    let usuario = document.getElementById("usuario").value;
+    let email = document.getElementById("email").value;
+    let senha = document.getElementById("senha").value;
+
+    // LOGIN FIXO
+    let usuarioCorreto = "thiago";
+    let emailCorreto = "admin@gmail.com";
+    let senhaCorreta = "1234";
+
+    if(usuario === usuarioCorreto && email === emailCorreto && senha === senhaCorreta) {
+        window.location.href = "home.html";
+    } else {
+        alert("❌ Usuário, email ou senha incorretos!");
+    }
+}
+</script>
+
+</body>
+</html>

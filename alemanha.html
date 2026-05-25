@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Climático da Alemanha</title>
+<style>
+    /* Estilos globais para a página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: orange;
+        margin: 20px;
+        color: #333;
+    }
+
+    /* CONTROLAR O TAMANHO DO MAPA */
+    img[usemap="#alemanha"] {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 4px;
+    }
+
+    /* AJUSTE DO MODAL: Amplo para telas grandes */
+    dialog {
+        border: 2px solid #0c0c0c;
+        border-radius: 12px;
+        padding: 30px;
+        width: 90%;
+        max-width: 800px; 
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        font-size: 18px; 
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    dialog h2 {
+        margin-top: 0;
+        font-size: 28px; 
+        color: #111;
+        border-bottom: 3px solid #f19d2e;
+        padding-bottom: 10px;
+    }
+
+    /* AJUSTE DA TABELA: Fonte grande e bem espaçada */
+    table {
+        width: 100%; 
+        border-collapse: collapse;
+        margin: 25px 0;
+    }
+
+    th, td {
+        border: 2px solid #0c0c0c; 
+        text-align: left;
+        padding: 15px; 
+        font-size: 18px; 
+    }
+
+    th {
+        background-color: #f19d2e;
+        color: #000;
+        width: 25%; 
+        font-weight: bold;
+    }
+
+    td {
+        background-color: #fff;
+    }
+
+    /* Botão de fechar grande */
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #e0e0e0;
+        border: 1px solid #999;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.2s;
+        float: right; 
+    }
+
+    button:hover {
+        background-color: #f90404;
+    }
+    .btn-home {
+        background: #000;
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        padding: 20px;
+     }    
+</style>
+</head>
+<body>
+    <a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+<h1>Mapa da Alemanha</h1>
+
+<img src="img/alemanha.svg" alt="mapa alemanha" usemap="#alemanha">
+
+<map name="alemanha">
+
+    <area shape="poly" 
+    coords="316,298,312,278,311,264,319,258,340,253,358,252,357,238,327,230,313,219,316,200,308,196,310,189,312,188,311,173,293,171,281,163,276,170,269,173,253,171,242,175,255,199,256,215,253,226,234,230,236,239,236,248,245,256,250,258,254,269,271,272,278,278,274,282,278,289,286,290,291,294,302,296,307,299,316,298" 
+    href="#" 
+    data-estado="sachsen-anhalt">
+
+    <area shape="poly" 
+    coords="240,256,238,260,226,260,219,267,211,270,201,272,204,279,217,286,215,299,204,305,203,312,202,320,210,320,210,328,235,341,236,348,248,348,244,339,253,339,262,341,263,346,269,345,268,333,275,329,279,337,301,336,303,332,299,328,304,321,306,327,312,323,321,320,318,314,318,309,325,305,335,302,334,297,329,295,324,292,316,289,316,298,316,300,304,298,291,295,283,292,279,291,273,286,275,277,270,273,257,272,251,269,249,259,245,256,238,257" 
+    href="#" 
+    data-estado="thuringen">
+
+    <area shape="poly" 
+    coords="157,395,162,382,159,374,156,365,157,361,156,359,160,356,168,354,179,356,180,358,182,349,189,348,195,342,196,336,207,334,209,321,202,321,202,302,214,297,215,286,201,280,200,273,194,272,194,277,184,275,187,267,187,262,190,256,177,256,170,265,165,270,160,261,153,264,157,272,144,272,137,278,145,278,145,290,135,290,134,293,135,296,131,302,121,305,115,308,116,313,114,318,116,323,113,328,106,327,107,334,115,343,110,346,110,347,102,350,103,352,97,359,100,363,119,359,123,368,127,376,130,379,125,384,128,391,137,394,137,387,140,387,141,393,148,395,148,401" 
+    href="#" 
+    data-estado="hessen">
+    
+    <area shape="poly" 
+    coords="112,314,99,300,45,331,46,337,28,335,28,327,20,324,23,314,11,302,14,296,9,289,21,284,17,278,24,268,21,249,15,237,24,232,35,236,57,231,50,225,67,212,82,211,94,203,95,197,102,204,112,208,108,218,113,220,113,222,108,224,110,229,138,218,134,208,126,200,134,201,141,196,149,196,146,206,157,207,161,197,166,202,157,211,162,219,166,224,168,230,168,237,175,239,179,244,179,253,167,267,157,260,148,261,154,271,142,271,134,279,145,281,143,289,134,290,134,295,128,301,117,304,113,312,113,315" 
+    href="#" 
+    data-estado="nordrhein">
+
+</map>
+
+<dialog id="sachsen-anhalt">
+    <h2>Sachsen-Anhalt (Saxônia-Anhalt)</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Continental temperado (verões amenos e invernos frios).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~2,1 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Planícies ao norte (50m) e montanhoso ao sudoeste (região do Harz, até 1.141m).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Campos agrícolas, florestas decíduas e mistas (carvalhos e faias).</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="thuringen">
+    <h2>Thüringen (Turíngia)</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Temperado úmido, com variações de montanha (invernos rigorosos com neve).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~2,1 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Moderada a alta; planaltos centrais e montanhas que passam de 900 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Florestas densas de coníferas (conhecido como o "Coração Verde" da Alemanha).</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="hessen">
+    <h2>Hessen (Hesse)</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Temperado marítimo a continental (invernos moderados e verões quentes nos vales).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~6,4 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Território de planaltos e colinas, variando de 100 a 950 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Grandes extensões de florestas decíduas (faias) e áreas cultivadas.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="nordrhein">
+    <h2>Nordrhein-Westfalen (Renânia do Norte-Vestfália)</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Marítimo temperado (invernos suaves e verões frescos, com chuvas bem distribuídas).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~18 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Planícies baixas ao norte (baixas altitudes) e regiões de colinas/serras ao sul (até 840m).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Florestas mistas fragmentadas, prados e forte ocupação urbana/industrial.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script>
+    // Abre o modal do estado correspondente ao clicar na área do mapa
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.dataset.estado;
+            document.getElementById(id).showModal();
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "Fechar"
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapa Climático da Espanha</title>
+<style>
+    /* Estilos globais para a página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: orange;
+        margin: 20px;
+        color: #333;
+    }
+
+    /* CONTROLAR O TAMANHO DO MAPA */
+    img[usemap="#espanha"] {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-radius: 4px;
+    }
+
+    /* AJUSTE DO MODAL: Amplo para telas grandes */
+    dialog {
+        border: 2px solid #0c0c0c;
+        border-radius: 12px;
+        padding: 30px;
+        width: 90%;
+        max-width: 800px; 
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        font-size: 18px; 
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    dialog h2 {
+        margin-top: 0;
+        font-size: 28px; 
+        color: #111;
+        border-bottom: 3px solid #f19d2e;
+        padding-bottom: 10px;
+    }
+
+    /* AJUSTE DA TABELA: Fonte grande e bem espaçada */
+    table {
+        width: 100%; 
+        border-collapse: collapse;
+        margin: 25px 0;
+    }
+
+    th, td {
+        border: 2px solid #0c0c0c; 
+        text-align: left;
+        padding: 15px; 
+        font-size: 18px; 
+    }
+
+    th {
+        background-color: #f19d2e;
+        color: #000;
+        width: 25%; 
+        font-weight: bold;
+    }
+
+    td {
+        background-color: #fff;
+    }
+
+    /* Botão de fechar grande */
+    button {
+        padding: 12px 24px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #e0e0e0;
+        border: 1px solid #999;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: background 0.2s;
+        float: right; 
+    }
+
+    button:hover {
+        background-color: #d0d0d0;
+    }
+    .btn-home {
+        background: #000;
+        color: #fff;
+        border-radius: 6px;
+        z-index: 1000;
+        padding: 20px;
+    }    
+</style>
+</head>
+<body>
+    <a href="home.html" class="btn-home">VOLTAR PARA HOME</a>
+<h1>Mapa da Espanha</h1>
+
+<img src="img/espanha.svg" alt="mapa espanha" usemap="#espanha">
+
+<map name="espanha">
+
+    <area shape="poly" 
+    coords="290,283,324,231,346,288,321,297,324,286,293,280" 
+    href="#" 
+    data-estado="madrid">
+
+    <area shape="poly" 
+    coords="327,229,362,214,377,233,397,228,410,257,404,268,427,294,412,323,427,333,421,349,433,357,434,368,424,364,412,366,409,392,404,388,369,414,357,406,357,396,351,382,291,392,264,368,274,326,264,327,257,309,249,287,266,288,284,281,290,287,294,282,321,291,316,300,347,289,349,286" 
+    href="#" 
+    data-estado="castela_mancha">
+
+    <area shape="poly" 
+    coords="426,294,440,297,454,272,462,246,492,261,463,319,467,350,481,361,457,388,445,417,438,413,431,398,432,365,432,354,427,349,427,332,415,321,427,295" 
+    href="#" 
+    data-estado="valencia">
+    
+    <area shape="poly" 
+    coords="372,415,397,453,445,428,428,391,428,370,415,365,412,394,402,391,375,415,384,426,385,425" 
+    href="#" 
+    data-estado="murcia">
+
+</map>
+
+<dialog id="madrid">
+    <h2>Comunidade de Madri</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Mediterrâneo continental (invernos frios e verões muito quentes/secos).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~6,8 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Média de 650 metros no planalto central, subindo para mais de 2.000 metros na Serra de Guadarrama.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Florestas de carvalhos, azinheiras, pinheiros nas serras e áreas de pastagem (dehesas).</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="castela_mancha">
+    <h2>Castela-Mancha (Castilla-La Mancha)</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Mediterrâneo continentalizado (forte amplitude térmica e chuvas escassas).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~2,1 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Predomínio de planaltos elevados (Meseta Central), variando entre 600 e 1.000 metros.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Grandes planícies agrícolas (vinhedos e cereais), azinheiras e matagais secos.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="valencia">
+    <h2>Comunidade Valenciana</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Mediterrâneo típico (verões quentes, invernos suaves e chuvas concentradas no outono).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~5,1 milhões de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Planícies costeiras ao nível do mar escalando rapidamente para sistemas montanhosos no interior.</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Pinheiros mediterrâneos, arbustos (maquis e garrigue) e extensas plantações de cítricos.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<dialog id="murcia">
+    <h2>Região de Múrcia</h2>
+    <table>
+        <tr><th>CLIMA</th><td>Semidesértico e mediterrâneo árido (altas temperaturas e baixíssimo índice de chuvas).</td></tr>
+        <tr><th>POPULAÇÃO</th><td>~1,5 milhão de habitantes.</td></tr>
+        <tr><th>ALTITUDE</th><td>Varia de planícies e depressões litorâneas a zonas montanhosas no interior (até 2.000m).</td></tr>
+        <tr><th>VEGETAÇÃO</th><td>Plantas xerófilas, palmeiras, arbustos espinhosos e estepe mediterrânea.</td></tr>
+    </table>
+    <button>Fechar</button>
+</dialog>
+
+<script>
+    // Abre o modal do estado correspondente ao clicar na área do mapa
+    document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function(e){
+            e.preventDefault();
+            const id = this.dataset.estado;
+            document.getElementById(id).showModal();
+        });
+    });
+
+    // Fecha o modal ao clicar no botão "Fechar"
+    document.querySelectorAll('dialog button').forEach(btn => {
+        btn.addEventListener('click', function(){
+            this.parentElement.close();
+        });
+    });
+</script>
+</body>
+</html>
